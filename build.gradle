@@ -2,7 +2,7 @@ plugins {
     id 'java-library'
 }
 
-group 'unmock.io'
+group 'io.unmock'
 version '0.0.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
