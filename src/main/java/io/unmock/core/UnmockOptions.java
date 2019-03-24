@@ -6,28 +6,27 @@ import io.unmock.core.logger.Logger;
 import io.unmock.core.persistence.Persistence;
 
 import java.util.Collection;
-import java.util.Map;
 
 
-final class UnmockInternalOptions {
-    public final @NotNull Logger logger;
-    public final @NotNull Persistence persistence;
-    public final @NotNull Save save;
-    public final @NotNull String unmockHost;
-    public final @NotNull String unmockPort;
-    public final @NotNull boolean useInProduction;
+final class UnmockOptions {
+    public final @Nullable Logger logger;
+    public final @Nullable Persistence persistence;
+    public final @Nullable Save save;
+    public final @Nullable String unmockHost;
+    public final @Nullable String unmockPort;
+    public final @Nullable boolean useInProduction;
     public final @Nullable String ignore;
     public final @Nullable String signature;
     public final @Nullable String token;
     public final @Nullable Collection<String> whitelist;
 
-    public UnmockInternalOptions(
-            @NotNull Logger logger,
-            @NotNull Persistence persistence,
-            @NotNull Save save,
-            @NotNull String unmockHost,
-            @NotNull String unmockPort,
-            @NotNull boolean useInProduction,
+    public UnmockOptions(
+            @Nullable Logger logger,
+            @Nullable Persistence persistence,
+            @Nullable Save save,
+            @Nullable String unmockHost,
+            @Nullable String unmockPort,
+            @Nullable boolean useInProduction,
             @Nullable String ignore,
             @Nullable String signature,
             @Nullable String token,
