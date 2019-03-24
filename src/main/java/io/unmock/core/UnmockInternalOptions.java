@@ -12,7 +12,7 @@ import java.util.Map;
 final class UnmockInternalOptions {
     public final @NotNull Logger logger;
     public final @NotNull Persistence persistence;
-    public final @Nullable String save;
+    public final @NotNull Save save;
     public final @NotNull String unmockHost;
     public final @NotNull String unmockPort;
     public final @NotNull boolean useInProduction;
@@ -24,7 +24,7 @@ final class UnmockInternalOptions {
     public UnmockInternalOptions(
             Logger logger,
             Persistence persistence,
-            String save,
+            Save save,
             String unmockHost,
             String unmockPort,
             boolean useInProduction,
