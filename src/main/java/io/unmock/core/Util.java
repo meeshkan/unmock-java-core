@@ -69,8 +69,7 @@ final class Util {
             @Nullable String method,
             @Nullable String path,
             @NotNull Persistence persistence,
-            // null save means don't save. empty save means save everything
-            @Nullable Collection<String> save,
+            @Nullable Save save,
             @NotNull boolean selfCall,
             @NotNull List<String> story,
             @NotNull boolean xy,
@@ -97,7 +96,7 @@ final class Util {
                         hash,
                         ". 🚀"
                 }).collect(Collectors.joining("")));
-                if (save != null && (save.isEmpty() || save.contains(hash))) {
+                if (save != null && (save.getKind() == Save.Kind.BOOLEAN && save.bool() || save.collection().contains(hash))) {
                     persistence.saveHeaders(hash, headers);
                     if (persistableData != null) {
                         persistence.saveMetadata(hash, persistableData);
