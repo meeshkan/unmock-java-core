@@ -19,11 +19,11 @@ public class Token {
 
     static private boolean PINGABLE = false;
 
-    static void makeHeader(@NotNull HttpURLConnection connection, @NotNull String token) {
+    private static void makeHeader(@NotNull HttpURLConnection connection, @NotNull String token) {
         connection.setRequestProperty("Authorization", "Bearer " + token);
     }
 
-    static @NotNull boolean canPingWithAccessToken(@NotNull String accessToken, @NotNull String unmockHost, @NotNull int unmockPort) {
+    private static @NotNull boolean canPingWithAccessToken(@NotNull String accessToken, @NotNull String unmockHost, @NotNull int unmockPort) {
         HttpURLConnection connection = null;
         Integer response = null;
         try {
@@ -43,7 +43,7 @@ public class Token {
         return response == HttpURLConnection.HTTP_OK;
     }
 
-    static @NotNull String exchangeRefreshTokenForAccessToken(@NotNull String refreshToken, @NotNull String unmockHost, @NotNull int unmockPort) throws IOException {
+    private static @NotNull String exchangeRefreshTokenForAccessToken(@NotNull String refreshToken, @NotNull String unmockHost, @NotNull int unmockPort) throws IOException {
         HttpURLConnection connection = null;
         String token = null;
         final String urlParameters = "{\"refreshToken\":\"" + refreshToken + "\"}";
