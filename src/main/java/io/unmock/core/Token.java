@@ -48,7 +48,7 @@ public class Token {
         String token = null;
         final String urlParameters = "{\"refreshToken\":\"" + refreshToken + "\"}";
         try {
-            final URL url = new URL("https", unmockHost, unmockPort, "/ping");
+            final URL url = new URL("https", unmockHost, unmockPort, "/token/access");
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
             connection.setUseCaches(false);

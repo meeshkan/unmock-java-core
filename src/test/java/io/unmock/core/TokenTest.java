@@ -59,7 +59,6 @@ public class TokenTest {
 
     @Test
     public void getsAccessToken() throws IOException {
-        System.out.println("HOST "+System.getenv("UNMOCK_HOST"));
         final String token = Token.getAccessToken(new TestPersistence(), System.getenv("UNMOCK_HOST"), Integer.parseInt(System.getenv("UNMOCK_PORT")));
         // smoke test, makes sure that token exists, should always be greater than 20
         Assert.assertTrue(token.length() > 20);
