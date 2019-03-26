@@ -14,23 +14,19 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-final class Util {
+public final class Util {
 
-    static final String UNMOCK_UA_HEADER_NAME = "X-Unmock-Client-User-Agent";
+    static public final String UNMOCK_UA_HEADER_NAME = "X-Unmock-Client-User-Agent";
 
-    static final @NotNull boolean hostIsWhitelisted(
+    static public final @NotNull boolean hostIsWhitelisted(
             @Nullable  Collection<String> whitelist,
-            @Nullable String host,
-            @Nullable String hostname) {
-        return whitelist != null &&
-                ((host != null && whitelist.contains(host))
-                        || (hostname != null && whitelist.contains(hostname)));
+            @Nullable String host) {
+        return whitelist != null && host != null && whitelist.contains(host);
     }
 
-    static final @NotNull String buildPath(
+    static public final @NotNull String buildPath(
             @NotNull Map<String, String> headerz,
             @Nullable String host,
-            @Nullable String hostname,
             @Nullable String ignore,
             @Nullable String method,
             @Nullable String path,
@@ -39,7 +35,7 @@ final class Util {
             String unmockHost,
             boolean xy
     ) throws UnsupportedEncodingException {
-        return (hostname != null && hostname.equals(unmockHost)) || (host != null && host.equals(unmockHost)) ?
+        return host != null && host.equals(unmockHost) ?
                 path :
                 Arrays.stream(new String[] {
                         "/",
@@ -49,7 +45,7 @@ final class Util {
                         "&path=",
                         URLEncoder.encode(path != null ? path : "", "UTF-8"),
                         "&hostname=",
-                        URLEncoder.encode(hostname != null ? hostname : host != null ? host : "", "UTF-8"),
+                        URLEncoder.encode(host != null ? host : "", "UTF-8"),
                         "&method=",
                         URLEncoder.encode(method != null ? method : "", "UTF-8"),
                         "&headers=",
@@ -59,12 +55,11 @@ final class Util {
                 }).collect(Collectors.joining(""));
     }
 
-    static final void endReporter(
+    static public final void endReporter(
             @Nullable String body,
             @Nullable String data,
             @NotNull  Map<String, String> headers,
             @Nullable String host,
-            @Nullable String hostname,
             @NotNull Logger logger,
             @Nullable String method,
             @Nullable String path,
@@ -85,7 +80,7 @@ final class Util {
                 logger.log(Arrays.stream(new String[] {
                         "Hi! We see you've called ",
                         method,
-                        hostname != null ? hostname : host,
+                        host,
                         path,
                         data != null ? "with data " + data : ""
                 }).collect(Collectors.joining("")));
@@ -96,7 +91,7 @@ final class Util {
                         hash,
                         "."
                 }).collect(Collectors.joining("")));
-                if (save != null && (save.getKind() == Save.Kind.BOOLEAN && save.bool() || save.collection().contains(hash))) {
+                if (save != null && ((save.getKind() == Save.Kind.BOOLEAN && save.bool()) || (save.getKind() == Save.Kind.COLLECTION && save.collection().contains(hash)))) {
                     persistence.saveHeaders(hash, headers);
                     if (persistableData != null) {
                         persistence.saveMetadata(hash, persistableData);

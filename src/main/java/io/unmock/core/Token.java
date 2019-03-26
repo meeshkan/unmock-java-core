@@ -84,7 +84,7 @@ public class Token {
         return token;
     }
 
-    static @Nullable String getAccessToken(@NotNull Persistence persistence, @NotNull String unmockHost, @NotNull int unmockPort) throws IOException {
+    public static @Nullable String getAccessToken(@NotNull Persistence persistence, @NotNull String unmockHost, @NotNull int unmockPort) throws IOException {
         String accessToken = persistence.loadAuth();
         if (accessToken != null) {
             if (!PINGABLE) {
