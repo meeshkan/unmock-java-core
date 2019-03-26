@@ -1,7 +1,6 @@
 package io.unmock.core;
 
-import com.sun.istack.internal.NotNull;
-import com.sun.istack.internal.Nullable;
+import org.jetbrains.annotations.Nullable;
 import io.unmock.core.logger.Logger;
 import io.unmock.core.persistence.Persistence;
 

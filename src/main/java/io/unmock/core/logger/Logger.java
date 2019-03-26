@@ -1,6 +1,6 @@
 package io.unmock.core.logger;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 
 public interface Logger {
     void log(@NotNull String message);

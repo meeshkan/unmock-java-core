@@ -1,8 +1,8 @@
 package io.unmock.core;
 
 import com.google.gson.Gson;
-import com.sun.istack.internal.NotNull;
-import com.sun.istack.internal.Nullable;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import io.unmock.core.logger.Logger;
 import io.unmock.core.persistence.Persistence;
 
@@ -94,7 +94,7 @@ final class Util {
                         xy ? "x" : "y",
                         "/",
                         hash,
-                        ". 🚀"
+                        "."
                 }).collect(Collectors.joining("")));
                 if (save != null && (save.getKind() == Save.Kind.BOOLEAN && save.bool() || save.collection().contains(hash))) {
                     persistence.saveHeaders(hash, headers);
