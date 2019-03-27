@@ -25,7 +25,7 @@ public class UtilTest {
     @Test
     public void buildsCorrectPathWithIgnoreAndSignature() throws UnsupportedEncodingException {
 
-        Assert.assertEquals("/x/?story=%5B%5D&path=%2Fv1%2Fx&hostname=www.foo.com&method=GET&headers=%7B%22Authorization%22%3A%22Foo%22%2C%22User-Agent%22%3A%22Bar%22%7D&ignore=%22path%22&signature=my-signature", Util.buildPath(
+        Assert.assertEquals("The correct path is built with ignore and a signature","/x/?story=%5B%5D&path=%2Fv1%2Fx&hostname=www.foo.com&method=GET&headers=%7B%22Authorization%22%3A%22Foo%22%2C%22User-Agent%22%3A%22Bar%22%7D&ignore=%22path%22&signature=my-signature", Util.buildPath(
                 makeHeaders(),
                 "www.foo.com",
                 new Gson().toJson("path"),
@@ -39,7 +39,7 @@ public class UtilTest {
     }
     @Test
     public void buildsCorrectPathWithSignature() throws UnsupportedEncodingException {
-        Assert.assertEquals("/x/?story=%5B%5D&path=%2Fv1%2Fx&hostname=www.foo.com&method=GET&headers=%7B%22Authorization%22%3A%22Foo%22%2C%22User-Agent%22%3A%22Bar%22%7D&signature=my-signature", Util.buildPath(
+        Assert.assertEquals("The correct path is built with a signature","/x/?story=%5B%5D&path=%2Fv1%2Fx&hostname=www.foo.com&method=GET&headers=%7B%22Authorization%22%3A%22Foo%22%2C%22User-Agent%22%3A%22Bar%22%7D&signature=my-signature", Util.buildPath(
                 makeHeaders(),
                 "www.foo.com",
                 null,
@@ -53,7 +53,7 @@ public class UtilTest {
     }
     @Test
     public void buildsCorrectPath() throws UnsupportedEncodingException {
-        Assert.assertEquals("/x/?story=%5B%5D&path=%2Fv1%2Fx&hostname=www.foo.com&method=GET&headers=%7B%22Authorization%22%3A%22Foo%22%2C%22User-Agent%22%3A%22Bar%22%7D", Util.buildPath(
+        Assert.assertEquals("The correct path is built without ignore or signature","/x/?story=%5B%5D&path=%2Fv1%2Fx&hostname=www.foo.com&method=GET&headers=%7B%22Authorization%22%3A%22Foo%22%2C%22User-Agent%22%3A%22Bar%22%7D", Util.buildPath(
                 makeHeaders(),
                 "www.foo.com",
                 null,

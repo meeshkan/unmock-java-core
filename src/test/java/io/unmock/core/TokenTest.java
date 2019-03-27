@@ -61,6 +61,6 @@ public class TokenTest {
     public void getsAccessToken() throws IOException {
         final String token = Token.getAccessToken(new TestPersistence(), System.getenv("UNMOCK_HOST"), Integer.parseInt(System.getenv("UNMOCK_PORT")));
         // smoke test, makes sure that token exists, should always be greater than 20
-        Assert.assertTrue(token.length() > 20);
+        Assert.assertTrue("Token is at least 20 characters long", token.length() > 20);
     }
 }
