@@ -8,8 +8,6 @@ Public API mocking for Java, Scala, Kotlin, Clojure, Groovy and friends.
 
 Unmock can be used to test modules that perform requests to third-party APIs like Hubspot, SendGrid, Behance, and hundreds of other public APIs.
 
-Unmock can also be used to mock these APIs in a development environment, ie an express server on a local machine or in a staging environment.
-
 `unmock-java-core` is designed to be a base package for implementations of unmock in a variety of JVM frameworks and languages, ie `okhttp`, `spring` and `volley`.
 
 The ultimate goal of unmock is to provide a semantically and functionally adequate mock of the internet.
