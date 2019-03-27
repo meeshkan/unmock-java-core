@@ -1,14 +1,15 @@
 package io.unmock.core;
 
 import com.google.gson.Gson;
+import io.unmock.core.logger.SilentLogger;
+import io.unmock.core.persistence.SilentPersistence;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -64,5 +65,39 @@ public class UtilTest {
                 "api.unmock.io",
                 true)
         );
+    }
+    @Test
+    public void endReporterSmokeTestWithNulls() {
+        Util.endReporter(
+                null,
+                null,
+                new HashMap<>(),
+                null,
+                new SilentLogger(),
+                null,
+                null,
+                new SilentPersistence(),
+                null,
+                false,
+                new ArrayList<>(),
+                false,
+                null);
+    }
+    @Test
+    public void endReporterSmokeTestWithNoNulls() {
+        Util.endReporter(
+                "foo",
+                "bar",
+                new HashMap<>(),
+                "foo.bac.io",
+                new SilentLogger(),
+                "GET",
+                "/foo",
+                new SilentPersistence(),
+                Save.ofBoolean(false),
+                false,
+                new ArrayList<>(Arrays.asList("hello", "world")),
+                false,
+                new PersistableData(new HashMap<>(), "b", "c", "d"));
     }
 }
