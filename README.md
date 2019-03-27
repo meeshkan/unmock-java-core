@@ -4,7 +4,7 @@
 [build]: https://circleci.com/gh/unmock/unmock-js
 [coverage]: https://coveralls.io/github/unmock/unmock-js
 
-Public API mocking for Node.js.
+Public API mocking for Java, Scala, Kotlin, Clojure, Groovy and friends.
 
 Unmock can be used to test modules that perform requests to third-party APIs like Hubspot, SendGrid, Behance, and hundreds of other public APIs.
 
@@ -13,29 +13,6 @@ Unmock can also be used to mock these APIs in a development environment, ie an e
 `unmock-java-core` is designed to be a base package for implementations of unmock in a variety of JVM frameworks and languages, ie `okhttp`, `spring` and `volley`.
 
 The ultimate goal of unmock is to provide a semantically and functionally adequate mock of the internet.
-
-**Table of Contents**
-
-<!-- toc -->
-
-- [Unmock](#unmock)
-  - [How does it work?](#how-does-it-work)
-  - [Install](#install)
-    - [Node version support](#node-version-support)
-  - [Usage](#usage)
-    - [Tests](#tests)
-    - [Development](#development)
-    - [Headless usage](#headless-usage)
-    - [unmock.io](#unmockio)
-    - [Saving mocks](#saving-mocks)
-    - [Ignoring aspects of a mock](#ignoring-aspects-of-a-mock)
-    - [Adding a signature](#adding-a-signature)
-    - [Whitelisting API](#whitelisting-api)
-    - [unmock.io tokens](#unmockio-tokens)
-  - [Contributing](#contributing)
-  - [License](#license)
-
-<!-- tocstop -->
 
 ## How does it work?
 
@@ -59,7 +36,7 @@ Unmock is written in Java 1.8.  It is currently untested for older versions of J
 
 ## unmock.io
 
-The URLs printed to the command line are hosted by unmock.io.  You can consult the documentation about that service [here](https://www.unmock.io/docs).
+The URLs printed to the command line are hosted by [unmock.io](https://www.unmock.io).  You can consult the documentation about that service [here](https://www.unmock.io/docs).
 
 ## Options
 
