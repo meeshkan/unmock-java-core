@@ -14,7 +14,7 @@ The ultimate goal of unmock is to provide a semantically and functionally adequa
 
 ## How does it work?
 
-The `unmock-java-core` library works by providing utility functions that, when used with a networking, inject JIT or persisted mocks of hundreds of APIs.  Developers can use these utility functions directly, or they can use one of several framework implementations including:
+The `unmock-java-core` library provides utility functions that, when used with a networking framework, help create mocks of hundreds of services.  Developers can use these utility functions directly, or they can use one of several framework implementations including:
 
 - `unmock-okhttp`
 - `unmock-spring`
