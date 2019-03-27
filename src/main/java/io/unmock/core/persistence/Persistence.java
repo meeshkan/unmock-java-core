@@ -1,8 +1,8 @@
 package io.unmock.core.persistence;
 
+import io.unmock.core.PersistableData;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import io.unmock.core.PersistableData;
 
 import java.util.Map;
 

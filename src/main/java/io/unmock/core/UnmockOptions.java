@@ -1,11 +1,11 @@
 package io.unmock.core;
 
+import io.unmock.core.logger.Logger;
 import io.unmock.core.logger.SilentLogger;
+import io.unmock.core.persistence.Persistence;
 import io.unmock.core.persistence.SilentPersistence;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import io.unmock.core.logger.Logger;
-import io.unmock.core.persistence.Persistence;
 
 import java.util.Collection;
 

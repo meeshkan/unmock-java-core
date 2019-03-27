@@ -4,14 +4,14 @@ import com.google.gson.Gson;
 import io.unmock.core.logger.SilentLogger;
 import io.unmock.core.persistence.SilentPersistence;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class UtilTest {

@@ -2,9 +2,9 @@ package io.unmock.core;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import io.unmock.core.persistence.Persistence;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import io.unmock.core.persistence.Persistence;
 
 import java.io.*;
 import java.lang.reflect.Type;
