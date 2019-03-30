@@ -1,9 +1,5 @@
 # Unmock
 
-[npmjs]: https://www.npmjs.com/package/unmock
-[build]: https://circleci.com/gh/unmock/unmock-js
-[coverage]: https://coveralls.io/github/unmock/unmock-js
-
 Public API mocking for Java, Scala, Kotlin, Clojure, Groovy and friends.
 
 Unmock can be used to test modules that perform requests to third-party APIs like Hubspot, SendGrid, Behance, and hundreds of other public APIs.
