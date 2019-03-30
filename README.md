@@ -12,9 +12,9 @@ The ultimate goal of unmock is to provide a semantically and functionally adequa
 
 The `unmock-java-core` library provides utility functions that, when used with a networking framework, help create mocks of hundreds of services.  Developers can use these utility functions directly, or they can use one of several framework implementations including:
 
-- `unmock-okhttp`
-- `unmock-spring`
-- `unmock-volley`
+- [`unmock-okhttp`](https://github.com/unmock/unmock-okhttp)
+- [`unmock-spring`](https://github.com/unmock/unmock-spring)
+- [`unmock-volley`](https://github.com/unmock/unmock-volley)
 
 ## Install
 
