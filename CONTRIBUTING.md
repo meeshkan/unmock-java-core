@@ -83,36 +83,12 @@ Other helpful conventions are
 
 Don't stress this; if necessary the maintainers can fix commit message(s) of a pull request using the `squash & merge` button.
 
-## Generate README TOC
-
-Make sure to update the README's table of contents whenever you update the README using the following npm script.
-
-```
-$ npm run toc
-```
-
 ## Running tests
 
-All of the tests work offline. None of them should hit the network.
+To run the tests, use the following command.
 
 ```
-$ npm test
-```
-
-### Running only a single test
-
-When you're writing a test for a specific purpose, it may be useful to only run that test. In order to do this, you can pass a `only` option as the second argument to the [`tap`](https://www.node-tap.org/) testrunner. For instance in `tests/example.js`, like so:
-
-```js
-test('description', { only: true }, t => {
-  // ...
-})
-```
-
-And then:
-
-```sh
-$ tap --only tests/example_file.js
+$ ./gradlew test
 ```
 
 ## Release Process
@@ -122,8 +98,6 @@ All of our releases are automated using [semantic-release](https://github.com/se
 ## GitHub Apps
 
 We use several GitHub apps to help maintain this repository. While we would like to address every issue and while we would like to be on hand to support every person, unmock is pretty much entirely volunteer run, and we simply don't have the time to do everything. Please don't be offended if an automated app posts in your issue! We're doing what we can with with we have.
-
-Currently, we use the [Stale](https://github.com/apps/stale) and [Lock](https://github.com/apps/lock) apps to mark old issues as stale, and to lock issues which have been closed to stop drive-by comments. You can see the configuration files for these in [.github/](.github).
 
 ## Becoming a maintainer
 
