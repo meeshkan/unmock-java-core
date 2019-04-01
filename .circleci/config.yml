@@ -43,3 +43,5 @@ jobs:
 
       # run tests!
       - run: ./gradlew test
+      # publish
+      - run: ./gradlew uploadArchives
