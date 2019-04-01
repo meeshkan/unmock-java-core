@@ -31,7 +31,8 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: echo -e ${SECRING} > secring.gpg
+      - run: echo -e ${SECRING} > secring.txt
+      - run: base64 -d secring.txt > secring.gpg
       - run: echo -e ${GRADLE_PROPERTIES} > gradle.properties
       - run: ./gradlew dependencies
 
