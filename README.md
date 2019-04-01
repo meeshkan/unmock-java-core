@@ -1,3 +1,7 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.unmock/core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.unmock/core)
+[![CircleCI](https://circleci.com/gh/unmock/unmock-java-core.svg?style=svg)](https://circleci.com/gh/unmock/unmock-java-core)
+[![Known Vulnerabilities](https://snyk.io/test/github/unmock/unmock-java-core/badge.svg?targetFile=build.gradle)](https://snyk.io/test/github/unmock/unmock-java-core?targetFile=build.gradle)
+
 # Unmock
 
 Public API mocking for Java, Scala, Kotlin, Clojure, Groovy and friends.
