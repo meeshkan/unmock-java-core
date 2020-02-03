@@ -17,9 +17,9 @@ The ultimate goal of unmock is to provide a semantically and functionally adequa
 
 The `unmock-java-core` library provides utility functions that, when used with a networking framework, help create mocks of hundreds of services.  Developers can use these utility functions directly, or they can use one of several framework implementations including:
 
-- [`unmock-okhttp`](https://github.com/unmock/unmock-okhttp)
-- [`unmock-spring`](https://github.com/unmock/unmock-spring)
-- [`unmock-volley`](https://github.com/unmock/unmock-volley)
+- [`unmock-okhttp`](https://github.com/meeshkan/unmock-okhttp)
+- [`unmock-spring`](https://github.com/meeshkan/unmock-spring)
+- [`unmock-volley`](https://github.com/meeshkan/unmock-volley)
 
 ## Install
 
@@ -116,10 +116,10 @@ At a certain point this becomes a bit tedious, at which point you will want to c
 
 Thanks for wanting to contribute! Take a look at our [Contributing Guide](CONTRIBUTING.md) for notes on our commit message conventions and how to run tests.
 
-Please note that this project is governed by the [Unmock Community Code of Conduct](https://github.com/unmock/code-of-conduct). By participating in this project, you agree to abide by its terms.
+Please note that this project is governed by the [Meeshkan Community Code of Conduct](https://github.com/meeshkan/code-of-conduct). By participating in this project, you agree to abide by its terms.
 
 ## License
 
 [MIT](LICENSE)
 
-Copyright (c) 2018‚ 2019 [Meeshkan](http://meeshkan.com) and other [contributors](https://github.com/unmock/unmock-js/graphs/contributors).
+Copyright (c) 2018‚ 2019 [Meeshkan](http://meeshkan.com) and other [contributors](https://github.com/meeshkan/unmock-js/graphs/contributors).
